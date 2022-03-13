@@ -76,7 +76,7 @@ html 标签属性可选参数：
 除此之外，可以通过访问：
 
 ```
-/plugins/files-list/?path=data/files-list.output&show-tags&show-time
+/<Config.rootPath>/plugins/files-list/?path=data/files-list.output&show-tags&show-time
 ```
 
 来获得归档页面。
@@ -99,7 +99,7 @@ var PluginDisplayConfig = {
 }
 ```
 
-然后访问 `/plugins/display?githubtest` 即可看到页面。
+然后访问 `/<Config.rootPath>/plugins/display?githubtest` 即可看到页面。
 
 参数说明：
 

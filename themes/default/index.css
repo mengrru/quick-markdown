@@ -1,7 +1,116 @@
 html {
-    --body-width: 900px;
+    --body-width: 700px;
+    --bg: #f7f4ef;
+    --link: #4682b4;
 }
 
-.plugins-files-list .file-item:hover {
-    background-color: #f5f5f5;
+body {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+a:hover {
+  color: #a0522d;
+}
+h1 {
+    font-size: 1.5em;
+}
+h2 {
+    font-size: 1.4em;
+}
+h3 {
+    font-size: 1.3em;
+}
+h4 {
+    font-size: 1.2em;
+}
+h5 {
+    font-size: 1.1em;
+}
+h6 {
+    font-size: 1em;
+}
+.index-posts .file-item {
+  background-color: floralwhite;
+  padding: 1.2em;
+  margin: 1.3em 0;
+}
+.index-posts .file-item .file-time {
+  font-size: .9em;
+  font-weight: bold;
+  display: inline-block;
+  float: none;
+  margin-right: .3em;
+}
+.index-posts .file-item .file-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  display: inline-block;
+}
+.index-posts .file-item .file-tag {
+  font-size: 1em;
+  margin-right: 0;
+}
+.index-posts .file-item .file-abstract {
+  margin-top: 1em;
+}
+.index-posts .file-item .file-time::before {
+  content: "📝 "
+}
+.index-posts .file-item .file-tag::before {
+  content: "🏷️ #"
+}
+mark {
+  padding: 4px;
+  border-radius: 5px;
+  margin: .1em .1em;
+  display: inline-block;
+}
+mark a {
+  text-decoration: none;
+}
+
+#header {
+  text-align: left;
+  margin-top: 1em;
+  margin-bottom: .8em;
+}
+.header {
+  display: flex;
+}
+.header .left-part {
+  display: inline-block;
+  margin-right: .8em;
+}
+.header .right-part {
+  display: inline-block;
+  text-align: left;
+}
+.header .left-part a {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+}
+.header .left-part a img {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  top: -35px;
+  left: -35px;
+}
+.header .right-part .page-title {
+  margin-top: .05em;
+  margin-bottom: .45em;
+}
+.header .right-part .page-title a {
+  text-decoration: none;
+}
+header .nav {
+  margin-top: 1.5em;
+}
+header .nav a {
+  margin: 0 .3em;
+  font-size: 1.1em;
 }

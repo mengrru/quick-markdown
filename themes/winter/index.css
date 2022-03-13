@@ -1,0 +1,88 @@
+html {
+    --font: 'Georgia', 'Microsoft Yahei';
+    --font: Tahoma, 'Microsoft YaHei';
+    --bg: #fafbf8;
+    --body-bg: #FaFBF8;
+    --body-width: 600px;
+    --text: #45283C;
+    --headline: #d19151;
+    --link: #999374;
+    --code-bg: #e6eaed;
+    --code-block-bg: #fff;
+    --code-block-border: #b9c9d3;
+    --mark-bg: #f5ece3;
+    --green-tip-bg: #EAFAF1;
+    --red-tip-bg: #FDF2E9;
+    --table-head-border: #524B24;
+    --table-body-border: #ccc;
+    --blockquote-text: #7c6676;
+    --blockquote-border: #7a95a5;
+    --blockquote-bg: #fff;
+    --doc-tag-text: #7a95a5;
+    --doc-tag-bg: #f5ece3;
+}
+hr {
+    margin: 1.4em .5em;
+    border: 1px dashed #ddd;
+}
+mark {
+    color: var(--doc-tag-text);
+    padding: 1px 4px;
+}
+h1::before {
+    content: "# ";
+    color: #7a95a5;
+    font-weight: bold;
+    font-family: 'Microsoft YaHei';
+}
+a:hover {
+    color: #7a95a5;
+}
+.avatar {
+    width: 48px;
+    box-shadow: 5px 5px 0px #E9CCB0;
+}
+.plugins-files-list .file-time {
+    color: var(--doc-tag-text);
+}
+.plugins-files-list .file-abstract {
+    font-size: 14px;
+}
+.plugins-files-list .file-item:hover {
+    background-color: var(--doc-tag-bg);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+body {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+/*** waline ***/
+:root {
+  /* 主题色 */
+  --waline-theme-color: #7a95a5 !important;
+  --waline-active-color: var(--link) !important;
+
+  /* 布局颜色 */
+  --waline-text-color: var(--text) !important;
+}
+/*** background ***/
+html {
+    padding: 0 1em;
+    box-sizing: border-box;
+}
+body {
+    margin: 2em auto;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+@media (max-width: 580px) {
+    body {
+        padding-left: 1em;
+        padding-right: 1em;
+        margin: 1em auto;
+        padding-top: 0em;
+    }
+}

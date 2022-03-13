@@ -8,6 +8,15 @@
         "-d", "pages/blog/posts",
         "-o", "data/posts-list",
         "-e", ".md"
+    ]],
+    ["rss", [
+        "-i", "data/posts-list",
+        "-o", "data/rss.xml",
+        "--max", "5",
+        "--url", "https://example.com/",
+        "--baseUrl", "https://example.com/",
+        "--description", "your\\ description",
+        "--creator", "your\\ name"
     ]]
 ]
 

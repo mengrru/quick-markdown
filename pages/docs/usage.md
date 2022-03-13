@@ -17,6 +17,7 @@ $<toc{}>
 | theme | 用于设置主题。先将主题下载到 themes 目录中，然后填写主题文件名，不包含`.css` |
 | showFooterText | 是否显示页脚文字，默认为 true |
 | footerText | 自定义的页脚文字，支持 HTML。非必须 |
+| rootPath | index.html 根路径，必须 |
 
 ## 路由规则
 
@@ -123,7 +124,10 @@ abstract: <摘要>
 比如：[?docs/usage&theme=autumn](?docs/usage&theme=autumn)
 
 可用的主题：
-- default
-- autumn
-- spring
-- paper
+- [default](?docs/usage&theme=default)
+- [spring](?docs/usage&theme=spring)
+- [autumn](?docs/usage&theme=autumn)
+- [winter](?docs/usage&theme=winter)
+- [paper](?docs/usage&theme=paper)
+- [green](?docs/usage&theme=green)
+- [yellow](?docs/usage&theme=yellow)

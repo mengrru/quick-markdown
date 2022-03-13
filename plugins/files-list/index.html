@@ -9,6 +9,7 @@
 </head>
 <body>
 
+    <header id="header"></header>
     <div id="article"></div>
     <footer id="footer">
         <a id="footer-link" class="footer-link" onclick="window.history.go(-1); return false" href="#">返回上一页</a>
@@ -17,8 +18,6 @@
     <script src="../../config.js"></script>
     <script src="ui.js"></script>
     <script>
-        loadCSS(Config.theme && '../../themes/' + Config.theme + '/index.css')
-
         var query = window.location.search.substring(1)
         query = query.split('&').map(e => e.split('='))
 
@@ -43,20 +42,6 @@
         function toUpperCase (_, s) {
             return s.toUpperCase()
         }
-        function loadCSS (url) {
-            if (!url) {
-                document.getElementsByTagName('html')[0].style.display = 'block'
-                return
-            }
-            const head = document.getElementsByTagName('head')[0]
-            const link = document.createElement('link')
-            link.type = 'text/css'
-            link.rel = 'stylesheet'
-            link.href = url
-            head.appendChild(link)
-            document.getElementsByTagName('html')[0].style.display = 'block'
-            return link
-        } 
     </script>
 </body>
 </html>

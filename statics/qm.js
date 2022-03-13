@@ -12,9 +12,10 @@
     document.title = Config.defaultTitle || 'Quick Markdown'
     const notFoundMessage = Config.notFoundText || '404 not found'
 
+    const hash = window.location.hash.substring(1)
     var query = window.location.search.substring(1).split('&')[0]
-    if (query && query !== Config.homepage.split('.')[0]) {
-        document.getElementById('footer-buttons').style.display = 'block'
+    if (!query || query === Config.homepage.split('.')[0]) {
+        document.getElementById('footer-buttons').style.display = 'none'
     }
     if ($footerText && $customedFooterText) {
         if (Config.showFooterText) {
@@ -24,14 +25,20 @@
         }
     }
 
-    function loadPage (mdRender, query, errfn) {
+    function loadPage (mdRender, query, errfn, finishedCallback) {
         loadFile(resolveQuery(query, true), function (data) {
             renderPage(data, mdRender)
+            typeof finishedCallback === 'function'
+                ? finishedCallback() : 1
         }, function () {
             loadFile(resolveQuery(query, false), function (data) {
                 renderPage(data, mdRender)
+                typeof finishedCallback === 'function'
+                    ? finishedCallback() : 1
             }, function () {
                 typeof errfn === 'function' ? errfn() : ''
+                typeof finishedCallback === 'function'
+                    ? finishedCallback() : 1
             })
         })
     }
@@ -127,7 +134,7 @@
     const md = markdownit({
         html: true,
         highlight: function (str, lang) {
-            if (lang && hljs.getLanguage(lang)) {
+            if (lang && hljs && hljs.getLanguage(lang)) {
                 try {
                     return '<pre class="hljs"><code>' +
                      hljs.highlight(str, { language: lang }).value
@@ -152,6 +159,9 @@
 
     loadPage(md, query, function () {
         load404(md)
+    }, function () {
+        document.getElementsByTagName('body')[0].style.visibility = 'visible'
+        if (hash) window.location.href = "#" + hash
     })
 })(
     Config,
@@ -160,5 +170,5 @@
     markdownItAnchor,
     markdownitContainer,
     markdownItTocDoneRight,
-    hljs
+    window.hljs
 )

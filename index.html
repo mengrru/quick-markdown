@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quick Markdown</title>
+    <title>quick-markdown</title>
     <link rel="stylesheet" href="./statics/md.base.css">
 </head>
-<body>
+<body style="visibility: hidden">
     <header id="header"></header>
     <main id="main">
         <article id="article"></article>
         <aside id="aside"></aside>
     </main>
     <footer id="footer">
-        <div id="footer-buttons" style="display: none;">
+        <div id="footer-buttons">
             <a class="footer-link" onclick="window.history.go(-1); return false" href="#">返回上一页</a>
             <a id="footer-link" class="footer-link" href=".">返回首页</a>
         </div>
-        <p id="footer-text"><span id="customed-footer-text"></span> Powered by <a href="https://github.com/mengrru/quick-markdown">quick-markdown</a></p>
+        <p id="footer-text">
+            <span id="customed-footer-text"></span> Powered by <a href="https://github.com/mengrru/quick-markdown">quick-markdown</a>
+        </p>
+
     </footer>
 
     <script src="./config.js"></script>
@@ -26,43 +29,17 @@
         if (inIE()) {
             document.getElementById('header').innerHTML = '<p style="text-align: center; padding-top: 20px;">你的浏览器版本太老了！推荐你使用 <a href="https://www.google.cn/chrome/">Chrome 浏览器</a>'
         }
-        const themeInfo = 
-            window.location.search
-                .slice(1).split('&')
-                .slice(1).map(e => e.split('='))
-                .filter(e => e[0] === 'theme')
-                [0]
-        const themeName = themeInfo && themeInfo[1]
-        loadCSS(
-            (themeName && 'themes/' + themeName + '/index.css')
-            || (Config.theme && 'themes/' + Config.theme + '/index.css')
-        )
         function inIE () {
             var userAgent = window.navigator.userAgent.toLowerCase()
             return userAgent.indexOf('trident') !== -1
         }
-        function loadCSS (url) {
-            if (!url) {
-                document.getElementsByTagName('html')[0].style.display = 'block'
-                return
-            }
-            const head = document.getElementsByTagName('head')[0]
-            const link = document.createElement('link')
-            link.type = 'text/css'
-            link.rel = 'stylesheet'
-            link.href = url
-            head.appendChild(link)
-            document.getElementsByTagName('html')[0].style.display = 'block'
-            return link
-        } 
     </script>
     <script src="./statics/markdown-it.js"></script>
     <script src="./statics/markdown-it-mark.js"></script>
     <script src="./statics/markdown-it-container.js"></script>
     <script src="./statics/markdown-it-anchor.js"></script>
     <script src="./statics/markdown-it-toc-done-right.js"></script>
-    <script src="./statics/highlight.min.js"></script>
     <script src="./statics/qm.js"></script>
-    <script src="./plugins/files-list/ui.js"></script>
+    <script src="plugins/files-list/ui.js"></script>
 </body>
 </html>
