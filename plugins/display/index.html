@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../statics/md.base.css">
 </head>
 <body>
+    <header id="header"></header>
     <div id="article">装载中...</div>
     <footer id="footer">
         <a id="footer-link" class="footer-link" onclick="window.history.go(-1); return false" href="#">返回上一页</a>
@@ -17,17 +18,20 @@
     <script src="../../config.js"></script>
     <script src="config.js"></script>
     <script>
-        loadCSS(Config.theme && '../../themes/' + Config.theme + '/index.css')
-
         var query = window.location.search.substring(1)
         var config = PluginDisplayConfig[query]
         var $content = document.getElementById('article')
+        var $footer = document.getElementById('footer')
         if (!config) {
             document.title = '404 Not Found'
             $content.style.textAlign = 'center'
             $content.innerHTML = '404 Not Found'
             throw Error('没有这个配置')
         }
+        if (!config.showFooterButtons) {
+            $footer.style.display = 'none'
+        }
+        loadCSS(config.style)
         document.title = config.title
         var md = markdownit({
             html: true,
@@ -44,19 +48,23 @@
                 content: 'description'
             }
         }
-        $content.innerHTML = md.render('# ' + config.title + '\n 装载中...')
+        $content.innerHTML = md.render((config.title ? ('# ' + config.title) : '') + '\n 装载中...')
         var padding = Padding[config.type]
         loadFile(
             padding.urlPrefix + config.projectId + '/issues/' + config.issueId,
             function (data) {
                 data = JSON.parse(data)
-                $content.innerHTML = md.render('# ' + config.title + '\n' + data[padding.content])
+                $content.innerHTML = md.render(
+                    (config.title ? ('# ' + config.title) : '')
+                    + '\n' + data[padding.content]
+                )
 
                 if (config.showUpdateTime) {
                     var $updateTime = document.createElement('p')
                     $updateTime.innerHTML = '更新时间：' + formatTime(data[padding.updateTime])
                     $content.appendChild($updateTime)
                 }
+                Array.prototype.slice.call($content.getElementsByTagName('a')).forEach($a => $a.target="_blank")
             })
 
         function loadFile (path, fn, errfn) {

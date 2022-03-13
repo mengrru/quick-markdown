@@ -1,5 +1,3 @@
-抱歉，本项目暂停维护><
-
 # quick-markdown
 
 quick-markdown 是一个 markdown 展示工具，能够快速为你的 markdown 文件生成展示页面。

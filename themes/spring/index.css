@@ -36,3 +36,19 @@ h1::before {
     content: "# ";
     color: #b4b699;
 }
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+#header-logo {
+  position: absolute;
+  top: 0;
+  right: 1em;
+  text-align: center;
+  padding-bottom: .35em;
+  padding-right: .3em;
+  padding-top: 0;
+  padding-left: .5em;
+  background-color: var(--bg);
+  color: var(--doc-tag-text);
+}

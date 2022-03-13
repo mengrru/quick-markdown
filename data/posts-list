@@ -1,1 +1,1 @@
-[{"fileData":{"root":"","dir":"pages/blog/posts","base":"first-post.md","ext":".md","name":"first-post","docPath":"blog/posts/first-post"},"frontMatter":{"title":"我的第一篇日志","tags":[],"time":"2021-11-24"}}]
+[{"fileData":{"root":"","dir":"pages/blog/posts","base":"first-post.md","ext":".md","name":"first-post","docPath":"blog/posts/first-post"},"frontMatter":{"title":"Hello, world","tags":["这是标签"],"time":"2022-3-13"}}]

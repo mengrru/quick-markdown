@@ -101,6 +101,7 @@
     function launch () {
         const domList = document.getElementsByClassName('plugins-files-list')
         if (domList.length !== 0 && state === State.Waiting) {
+            document.removeEventListener('DOMSubtreeModified', launch)
             renderFilesListUI(domList)
         }
     }

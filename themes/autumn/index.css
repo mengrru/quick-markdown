@@ -22,7 +22,7 @@ html {
 }
 h1::before {
     content: "# ";
-    color: var(--table-head-border);
+    color: #b22222;
     font-weight: bold;
     font-family: 'Microsoft YaHei';
 }
@@ -33,6 +33,6 @@ h1::before {
 .plugins-files-list .file-item:hover {
     background-color: var(--doc-tag-bg);
 }
-hr {
-    border: 1px solid var(--blockquote-border);
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
 }
