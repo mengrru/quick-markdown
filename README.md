@@ -25,3 +25,7 @@ mengrru.github.io/quick-markdown/?example
 即可浏览该文件的渲染后页面。
 
 详细使用说明访问 [https://mengrru.github.io/quick-markdown](https://mengrru.github.io/quick-markdown)
+
+## 内置主题预览
+
+![](./themes-preview.jpg)
