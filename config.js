@@ -33,6 +33,16 @@ if (typeof module === 'object') {
         document.getElementById('header').innerHTML = data
       )
 
+    const $footerText = document.getElementById('footer-text')
+    const $customedFooterText = document.getElementById('customed-footer-text')
+    if ($footerText && $customedFooterText) {
+        if (Config.showFooterText) {
+            $customedFooterText.innerHTML = Config.footerText
+        } else {
+            $footerText.style.display = 'none'
+        }
+    }
+
     function loadCSS (url) {
         if (!url) {
             document.getElementsByTagName('html')[0].style.display = 'block'

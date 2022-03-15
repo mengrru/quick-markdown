@@ -1,0 +1,167 @@
+html {
+    --font: 'Microsoft JhengHei', '宋体' !important;
+    --bg: #adb8b4;
+    --body-bg: transparent;
+    --body-width: 600px;
+    --text: #5d5554;
+    --headline: #d89486;
+    --link: #866560;
+    --code-bg: #aba5a5;
+    --code-block-bg: #aba5a5;
+    --code-block-border: transparent;
+    --mark-bg: var(--blue);
+    --table-head-border: var(--link);
+    --table-body-border: #00000070;
+    --blockquote-text: #666;
+    --blockquote-border: transparent;
+    --blockquote-bg: #ffffff50;
+    --doc-tag-text: #fff;
+    --doc-tag-bg: #aba5a5;
+    --green-tip-bg: var(--blockquote-bg);
+    --red-tip-bg: var(--blockquote-bg);
+
+    --blue: #85b9a7;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACFJREFUeNpiZGBg4GegAsBlCD8TqSYNQg2Mo6FEBAAIMACdPABtrSW/IQAAAABJRU5ErkJggg==");
+    background-blend-mode: multiply;
+}
+
+code {
+  color: #fdfdfd;
+}
+p {
+  margin: .7em 0;
+}
+mark {
+  color: #fdfdfd;
+}
+hr {
+  border: 1px dashed #aba5a5;
+  margin: 1.8em 0;
+}
+a:hover {
+  color: var(--blue);
+}
+#main {
+  background-color: #ebe1df;
+  border-radius: 2em;
+}
+#main::before {
+  content: "";
+  padding: 1em .5em;
+  display: block;
+  background-color: #f7e5e3;
+}
+#main::after {
+  content: "";
+  padding: 1em .5em;
+  display: block;
+  background-color: #daddd4;
+}
+h1 {
+  padding: .3em .5em;
+  background-color: #daddd4;
+}
+#article {
+  padding: .8em 1.5em;
+}
+#header {
+  text-align: left;
+  position: relative;
+}
+#header .header h1 {
+  background-color: transparent;
+  padding: 0;
+  font-size: 3em;
+  margin-top: .3em;
+  margin-bottom: .2em;
+}
+#header .header h1 a {
+  text-decoration: none;
+  color: #af7569;
+}
+#header .header h2 {
+  color: #daddd4;
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-top: 0em;
+  margin-bottom: 1em;
+  background-color: transparent;
+}
+
+#nav {
+  position: absolute;
+  right: 2em;
+  top: 130%;
+}
+
+#nav a {
+  margin: 0 .4em;
+  font-size: .8em;
+  color: var(--blue);
+  text-decoration: none;
+}
+#nav a:hover {
+  color: var(--link);
+}
+
+#footer a:hover {
+  color: #fdfdfd;
+  background-color: var(--blue);
+}
+
+.index-posts .file-item {
+  padding: 1.2em;
+  margin: 1.3em 0;
+  border: 5px solid #daddd4;
+}
+.index-posts .file-item:hover {
+  background-color: #ffffff50;
+}
+.index-posts .file-item .file-time {
+  font-size: .9em;
+  font-weight: bold;
+  display: inline-block;
+  float: none;
+  margin-right: .3em;
+}
+.index-posts .file-item .file-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  display: inline-block;
+}
+.index-posts .file-item .file-tag {
+  font-size: 1em;
+  margin-right: 0;
+}
+.index-posts .file-item .file-abstract {
+  margin-top: 1em;
+}
+.index-posts .file-item .file-time::before {
+  content: "📝 "
+}
+.index-posts .file-item .file-tag::before {
+  content: "#"
+}
+.index-weeks .file-item .file-time::before {
+  content: "📒 "
+}
+
+@media (max-width: 530px) {
+  .index-posts .file-item .file-title {
+    display: block;
+    margin-top: .7em;
+  }
+}
+
+/*** waline ***/
+:root {
+  --waline-bgcolor: #ffffff50 !important;
+  --waline-bgcolor-light: transparent !important;
+  --waline-border-color: var(--bg) !important;
+  /* 主题色 */
+  --waline-theme-color: var(--link) !important;
+  --waline-active-color: var(--headline) !important;
+
+  /* 布局颜色 */
+  --waline-text-color: var(--text) !important;
+}

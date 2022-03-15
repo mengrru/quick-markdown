@@ -10,10 +10,15 @@
 <body>
 
     <header id="header"></header>
-    <div id="article"></div>
+    <main id="main">
+      <div id="article"></div>
+    </main>
     <footer id="footer">
         <a id="footer-link" class="footer-link" onclick="window.history.go(-1); return false" href="#">返回上一页</a>
         <a id="footer-link" class="footer-link" href="../../">返回首页</a>
+        <p id="footer-text">
+            <span id="customed-footer-text"></span> Powered by <a href="https://github.com/mengrru/quick-markdown">quick-markdown</a>
+        </p>
     </footer>
     <script src="../../config.js"></script>
     <script src="ui.js"></script>
