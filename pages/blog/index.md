@@ -19,6 +19,7 @@
 - [paper](?blog&theme=paper)
 - [green](?blog&theme=green)
 - [yellow](?blog&theme=yellow)
+- [grace](?blog&theme=grace)
 
 
 <style>
