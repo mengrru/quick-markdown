@@ -21,18 +21,22 @@ html {
     --red-tip-bg: var(--blockquote-bg);
 
     --blue: #85b9a7;
+    --white: #fdfdfd;
+    --main-bg: #ebe1df;
+    --head-color: #f7e5e3;
+    --tail-color: #daddd4;
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACFJREFUeNpiZGBg4GegAsBlCD8TqSYNQg2Mo6FEBAAIMACdPABtrSW/IQAAAABJRU5ErkJggg==");
     background-blend-mode: multiply;
 }
 
 code {
-  color: #fdfdfd;
+  color: var(--white);
 }
 p {
   margin: .7em 0;
 }
 mark {
-  color: #fdfdfd;
+  color: var(--white);
 }
 hr {
   border: 1px dashed #aba5a5;
@@ -42,24 +46,24 @@ a:hover {
   color: var(--blue);
 }
 #main {
-  background-color: #ebe1df;
+  background-color: var(--main-bg);
   border-radius: 2em;
 }
 #main::before {
   content: "";
   padding: 1em .5em;
   display: block;
-  background-color: #f7e5e3;
+  background-color: var(--head-color);
 }
 #main::after {
   content: "";
   padding: 1em .5em;
   display: block;
-  background-color: #daddd4;
+  background-color: var(--tail-color);
 }
 h1 {
   padding: .3em .5em;
-  background-color: #daddd4;
+  background-color: var(--tail-color);
 }
 #article {
   padding: .8em 1.5em;
@@ -80,7 +84,7 @@ h1 {
   color: #af7569;
 }
 #header .header h2 {
-  color: #daddd4;
+  color: var(--tail-color);
   font-size: 1.5em;
   font-weight: normal;
   margin-top: 0em;
@@ -91,7 +95,7 @@ h1 {
 #nav {
   position: absolute;
   right: 2em;
-  top: 130%;
+  top: 128%;
 }
 
 #nav a {
@@ -105,14 +109,14 @@ h1 {
 }
 
 #footer a:hover {
-  color: #fdfdfd;
+  color: var(--white);
   background-color: var(--blue);
 }
 
 .index-posts .file-item {
   padding: 1.2em;
   margin: 1.3em 0;
-  border: 5px solid #daddd4;
+  border: 5px solid var(--tail-color);
 }
 .index-posts .file-item:hover {
   background-color: #ffffff50;

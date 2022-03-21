@@ -4,7 +4,7 @@
 
 ## 日志列表
 
-<div data-show-tags class="plugins-files-list" data-path="data/posts-list" data-sort="time" data-show-time data-max="5"></div>
+<div data-show-tags class="plugins-files-list index-posts" data-path="data/posts-list" data-sort="time" data-show-time data-max="5"></div>
 
 [更多](plugins/files-list?path=/quick-markdown/data/posts-list&sort=time&show-time&show-tags)
 
